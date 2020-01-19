@@ -12,6 +12,9 @@ import logo from '../../resources/images/logo.png';
 
 
 const useStyles = makeStyles(theme => ({
+    appBar:{
+        height: "100%"
+    },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -34,7 +37,7 @@ function Header(props) {
     const classes = useStyles();
 
     return (
-        <AppBar position="static" color="primary">
+        <AppBar position="static" color="primary" className={classes.appBar}>
             <Toolbar color="primary">
                 <Grid container spacing={2} justify="space-between" >
                     <Grid item className={classes.sectionMenuMobile}>
