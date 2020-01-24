@@ -5,8 +5,10 @@ import React from 'react';
 // import ProfileSample from './views/ProfileSample';
 // import TacosSample from './views/TacosSample';
 // import Home from './views/Home';
+import Drawer from './views/common/DrawerMenu';
 
 import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 import Header from './views/common/Header';
 
 
@@ -19,14 +21,17 @@ function App() {
           <Header />
         </div>
         <div className={classes.containerFlex}>
-          <div className={classes.sideBar}>
-          dfghjklñ
-          </div>
-          <div className={classes.workspace}>
-            Container
+            <div className={classes.sideBar}>
+              <Drawer />
+            </div>
+            <div className={classes.workspace}>
+              Container
           </div>
         </div>
-        <div className={classes.footerFlex}>Footer</div>
+        <div className={classes.footerFlex}>Footerjjjjjjjjjjjjj
+        jjjjjjjjjjjjjjjjj
+        j
+        </div>
       </div>
     </>
   );
@@ -41,6 +46,10 @@ const useStyles = makeStyles({
     height: "100vh",
     minWidth: "100vw",
     backgroundColor: "red",
+  },
+  drawer:{
+    height: `calc(100vh - ${headerHeight + footerHeight}vh)`,
+    marginTop: `${headerHeight}vh`,
   },
   headerFlex: {
     flexGrow: 1,
